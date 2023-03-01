@@ -9,6 +9,7 @@
   </div>
 </template>
 <script>
+import axios from "axios";
 export default {
   name: "SignUp",
   data() {
@@ -28,11 +29,13 @@ export default {
       console.warn(result);
       if (result.status == 201) {
         alert("Sign Up done");
+        localStorage.setItem("user-info", JSON.stringify(result.data));
       }
     },
   },
 };
 </script>
+
 <style>
 .logo {
   width: 180px;
