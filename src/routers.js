@@ -1,4 +1,4 @@
-import Home from "./components/Home.vue";
+import Home from "./components/Home.html";
 import SignUp from "./components/SignUp.vue";
 import { createRouter, createWebHistory } from "vue-router";
 
