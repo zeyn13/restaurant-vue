@@ -327,15 +327,59 @@ export default {
   width: 100%;
 }
 
-.home-about .content{
-  flex: 1 1 40rem;
+.home-about .content .title {
+    font-size: 3rem;
+    padding-top: .5rem;
+    color: #130f40;
 }
-
-.home-about .content span{
-  font-family: 'Satisfy' cursive;
-  font-size: 3rem;
-  color: #27ae60;
+.home-about .content p {
+    padding: 1rem 0;
+    line-height: 2;
+    font-size: 1.4rem;
+    color: #666;
 }
-
-
+.home-about .content .icons-container {
+    margin-top: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+.home-about .content .icons-container .icons {
+    flex: 1 1 20rem;
+    border-radius: .5rem;
+    background: #fff;
+    box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.05);
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem;
+}
+.home-about .content .icons-container .icons h3 {
+    font-size: 1.7rem;
+    color: #130f40;
+}
+@media (max-width: 768px) {
+    #menu-btn {
+        display: inline-block;
+    }
+    .home-main .home-parallax-img {
+        top: 0;
+        right: 0;
+        width: 100%;
+    }
+    .home-banner .grid-banner .content h3 {
+        font-size: 15px !important;
+    }
+    .home-banner .grid-banner .content.center {
+        padding-left: 0px !important;
+    }
+}
+@media (max-width: 576px) {
+    .home-main .content h3 {
+        font-size: 3rem;
+    }
+    .home-main .content p {
+        font-size: 1.5rem;
+    }
+}
 </style>
