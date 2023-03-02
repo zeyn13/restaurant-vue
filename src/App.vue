@@ -3,8 +3,13 @@
 </template>
 
 <script>
+import NavBar from "./components/NavBar.vue";
+
 export default {
   name: "App",
+  components: {
+    NavBar,
+  },
 };
 </script>
 
@@ -38,4 +43,5 @@ export default {
   color: #fff;
   cursor: pointer;
 }
+
 </style>

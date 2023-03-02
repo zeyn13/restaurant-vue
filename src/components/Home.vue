@@ -1,5 +1,11 @@
 <template>
-  <h1>Hello User, Welcome on Home Page</h1>
+  <div>
+    <div class="home-main">
+      <div class="content">
+        
+      </div>
+    </div>
+  </div>
 </template>
 <script>
 export default {
