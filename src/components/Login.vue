@@ -1,4 +1,6 @@
-<template>
+<template></template>
+
+<!-- <template>
     <img class="logo" src="../assets/resto.jpg" alt="" />
     <h1>Login</h1>
     <div class="register">
@@ -48,4 +50,4 @@ export default {
   }
 };
 
-</script>
+</script> -->

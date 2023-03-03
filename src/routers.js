@@ -1,5 +1,5 @@
 import Home from "./components/Home.vue";
-import SignUp from "./components/SignUp.vue";
+import Register from "./components/Register.vue";
 import { createRouter, createWebHistory } from "vue-router";
 import Login from "./components/Login.vue";
 
@@ -10,9 +10,9 @@ const routes = [
     path: "/",
   },
   {
-    name: "SignUp",
-    component: SignUp,
-    path: "/signup",
+    name: "Register",
+    component: Register,
+    path: "/register",
   },
   {
     name: "Login",

@@ -7,9 +7,9 @@
     <input type="password" v-model="password" placeholder="Enter Password" />
     <button v-on:click="signUp">Sign Up</button>
     <p>
-      <router-link to="/login" >Login</router-link>
+      <router-link to="/login">Login</router-link>
     </p>
-</div>
+  </div>
 </template>
 <script>
 import axios from "axios";
@@ -36,17 +36,13 @@ export default {
       }
     },
   },
-  mounted()
-  {
-    let user= localStorage.getItem('user-info');
-    if(user)
-    {
-      this.$router.push({name:Home});
+  mounted() {
+    let user = localStorage.getItem("user-info");
+    if (user) {
+      this.$router.push({ name: Home });
     }
-  }
+  },
 };
 </script>
 
-<style>
-
-</style>
+<style></style>
