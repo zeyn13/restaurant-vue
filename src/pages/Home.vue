@@ -130,12 +130,7 @@
 export default {
   name: "Home",
 
-  mounted() {
-    let user = localStorage.getItem("user-info");
-    if (!user) {
-      this.$router.push({ name: SignUp });
-    }
-  },
+ 
   methods: {
     scrollToTop() {
       window.scrollTo(0, 0);
