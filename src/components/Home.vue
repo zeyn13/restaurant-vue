@@ -327,6 +327,16 @@ export default {
   width: 100%;
 }
 
+.home-about .content{
+  flex: 1 1 40rem;
+}
+
+.home-about .content span{
+  font-family: 'Satisy', cursive;
+  font-size: 3rem;
+  color: #27ae60;
+}
+
 .home-about .content .title {
     font-size: 3rem;
     padding-top: .5rem;
