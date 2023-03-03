@@ -1,53 +1,70 @@
-<template></template>
+import router from '@/router'; import { handleError } from 'vue';
 
-<!-- <template>
-    <img class="logo" src="../assets/resto.jpg" alt="" />
-    <h1>Login</h1>
-    <div class="register">
-        <input type="text" v-model="email" placeholder="Enter Email" />
-        <input type="password" v-model="password" placeholder="Enter Password" />
-        <button v-on:click="login" >Login</button>
-        <p>
-            <router-link to="signup">Sign Up</router-link>
-        </p>
+<template>
+  <div class="login-container">
+    <div class="login-form-container">
+      <form id="loginForm" @submit="handleSubmit" novalidate autocomplete="off">
+        <h3>LOGIN</h3>
+
+        <div v-if="errors.length" class="error-box">
+          <ul>
+            <li v-for="error in errors" :key="error">{{ error }}</li>
+          </ul>
+        </div>
+
+        <div class="form-group">
+          <input
+            type="email"
+            id="uEmail"
+            name="uEmail"
+            class="form-control"
+            placeholder="Enter your email"
+            v-model="loginObj.email"
+          />
+        </div>
+
+        <div class="form-group">
+          <input
+            type="password"
+            id="uPass"
+            name="uPass"
+            class="form-control"
+            placeholder="Enter your password"
+            v-model="loginObj.pass"
+          />
+        </div>
+
+        <div class="form-group">
+          <input type="submit" value="Login now" class="btn" />
+          <p>
+            Don't have an account ?
+            <router-link @click="scrollToTop()" to="/register"
+              >Create one</router-link
+            >
+          </p>
+        </div>
+      </form>
     </div>
-
-    
+  </div>
 </template>
 
 <script>
-import axios from 'axios'
+import { def } from "@vue/shared";
+import axios from "axios";
+import { mapMutations } from "vuex";
 export default {
-    name: "Login",
-    data()
-    {
-        return {
-            email:'',
-            password:''
-        }
-    },
-    methods:{
-         async login()
-        {
-            let result = await axios.get(
-            'http://localhost:3000/users?email=${this.email}&password=${this.password}'
-            )
+  name: "Login",
 
-            if (result.status == 200 && result.data.length>0) {
-        localStorage.setItem("user-info", JSON.stringify(result.data[0]));
-        this.$router.push({ name: "Home" });
-      }
-            console.warn(result)
-        }
-    },
-    mounted()
-  {
-    let user= localStorage.getItem('user-info');
-    if(user)
-    {
-      this.$router.push({name:Home});
-    }
+  data() {
+    return {
+      loginObj: { email: "", pass: "" },
+      matchUser: undefined,
+      errors: [],
+    };
+  },
+
+  methods:{
+    ...map
   }
 };
-
-</script> -->
+</script>
